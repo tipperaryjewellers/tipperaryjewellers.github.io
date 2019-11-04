@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My webpage!</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script async src="./javascript/index.js"></script>
+  </head>
+  <body>
+    <style>
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #43a2ca;
+}
+
+.active {
+  background-color: #43a2ca;
+}
+</style>
+</body>
+
+<body>
+
+<ul>
+  <li><a style="color:black;" href="https://www.facebook.com/Tipperary-Jewellers-140613289897800/">VISIT US ON FACEBOOK</a></li>
+</ul>
+<div style="padding:20px;height:1100px;">
+    <h1 style="font-size:100px;font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;">Tipperary Jewellers</h1>
+    <hr>
+    <h3 style="font-size:25px;font-family:verdana;">2 Davis Street, Tipperary Town</h3>
+    <h4 style="font-size:25px;font-family:verdana;">Contact: 086 832 3471</h4>
+    <img src="front_store_image_using.jpg" style="width:100%" height="600" class="responsive">
+    <p align="left" style="font-family:verdana;font-size:20px;">Shop local at Tipperary Jewellers. We have a large range of watches, rings, necklaces and more. Battery replacements and jewellery engranvings also done in-store. Browse our collection to find something you like and stop by the shop or call for any further enquires.</p>
+
+    
+</div>
+</body>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1 style = "font-size:60px;">Gallery</h1>
+  <p style = "font-size:35px;">Browse our gallery of products and services by clicking the image</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+    <div class="column">
+        <img src="watch_using.jpg" style="width:100%" usemap="#watches">
+        <map name="watches">
+            <area shape="rect" coords="0,0,900,900" href="watches.html">
+        </map>
+        <img src="wedding_ring.jpg" style="width:100%" usemap="#rings">
+        <map name="rings">
+            <area shape="rect" coords="0,0,900,900" href="rings.html">
+        </map>
+    </div>
+    <div class="column">
+        <img src="necklace.jpg" style="width:100%" usemap="#necklaces">
+        <map name="necklaces">
+            <area shape="rect" coords="0,0,900,900" href="jewel.html">
+        </map>
+        <img src="jewellery_repair_using.jpg" style="width:100%">
+    </div>
+</div>
+
+</body>
+
+<!-- Header -->
+<div class="header">
+  <h1 style = "font-size:60px;">Come visit us in-store</h1>
+</div>
+
+<head>
+    <style>
+      #map {
+        width: 1300px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPsa9iOkjTVX2ALYen0Qe7mSo54rb1DrQ&callback=myMap"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var myLatLng = {lat: 52.473977, lng: -8.162148};
+        var mapOptions = {
+          center: new google.maps.LatLng(myLatLng),
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+  });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+
+</html>
